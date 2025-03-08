@@ -26,6 +26,7 @@
   ],
   "scripts": {
     "start": "concurrently \"cd example && parcel watch ./*.html --dist-dir ../local/ --public-url . --no-cache --no-hmr\" \"static-server\"",
+    "bundle": "esbuild src/index.js --bundle --packages=external --outfile=dist/closed-chain-ik-js.js --format=esm",
     "build": "cd example && parcel build ./*.html --dist-dir ../dist/ --public-url . --no-cache --no-content-hash",
     "lint": "eslint \"./src/**/*.js\" \"./test/**/*.js\" && tsc -p tsconfig.json --noEmit",
     "test": "cd test && jest"
@@ -50,6 +51,7 @@
     "@babel/preset-env": "^7.11.5",
     "@types/three": "^0.133.0",
     "concurrently": "^5.3.0",
+    "esbuild": "^0.25.0",
     "eslint": "^7.32.0",
     "eslint-config-mdcs": "^5.0.0",
     "eslint-plugin-jest": "^24.1.0",
