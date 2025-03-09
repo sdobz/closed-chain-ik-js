@@ -11,7 +11,7 @@ import {
 	Vector2,
 	Vector4,
 	Mesh,
-	SphereBufferGeometry,
+	SphereGeometry,
 	MeshBasicMaterial,
 	PCFSoftShadowMap,
 	Box3,
@@ -495,11 +495,11 @@ function render() {
 		const color = new Color( 0xffca28 ).convertSRGBToLinear();
 		const group = new Group();
 		const mesh = new Mesh(
-			new SphereBufferGeometry( 0.05, 30, 30 ),
+			new SphereGeometry( 0.05, 30, 30 ),
 			new MeshBasicMaterial( { color } ),
 		);
 		const mesh2 = new Mesh(
-			new SphereBufferGeometry( 0.05, 30, 30 ),
+			new SphereGeometry( 0.05, 30, 30 ),
 			new MeshBasicMaterial( {
 				color,
 				opacity: 0.4,

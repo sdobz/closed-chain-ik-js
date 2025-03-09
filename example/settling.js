@@ -11,7 +11,7 @@ import {
 	Vector2,
 	Vector3,
 	Mesh,
-	PlaneBufferGeometry,
+	PlaneGeometry,
 	MeshStandardMaterial,
 	PCFSoftShadowMap,
 	BufferGeometry,
@@ -137,7 +137,7 @@ function init() {
 
 	// generate terrain
 	const dimension = 400;
-	terrain = new Mesh( new PlaneBufferGeometry( 25, 25, dimension, dimension ), new MeshStandardMaterial() );
+	terrain = new Mesh( new PlaneGeometry( 25, 25, dimension, dimension ), new MeshStandardMaterial() );
 
 	const posAttr = terrain.geometry.attributes.position;
 	for ( let x = 0; x <= dimension + 1; x ++ ) {
